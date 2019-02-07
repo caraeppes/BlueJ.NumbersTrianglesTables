@@ -21,22 +21,17 @@ public class NumberUtilities {
     }
 
     public static String getEvenNumbers(int start, int stop) {
-       if (start % 2 == 1){
-           start++;
-        }
-      
-       return getRange(start, stop, 2);
+        
+        return (start % 2 == 1) ? getRange(start + 1, stop, 2) : getRange(start, stop, 2);
             
     }
 
     public static String getOddNumbers(int start, int stop) {
-        if (start % 2 == 0){
-           start++;
+        
+        return (start % 2 == 0) ? getRange(start + 1, stop, 2): getRange(start, stop, 2);
+        
         }
-      
-       return getRange(start, stop, 2);
-           
-    }
+   
 
     public static String getExponentiations(int start, int stop, int exponent) {
         String answer = "";
